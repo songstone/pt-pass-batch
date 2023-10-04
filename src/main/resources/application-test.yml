@@ -1,0 +1,10 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        globally_quoted_identifiers: true
+logging:
+  level:
+    org.hibernate.type.descriptor.sql: trace
