@@ -16,29 +16,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @RequiredArgsConstructor
-@EnableBatchProcessing // 배치 실행 설정
 @SpringBootApplication
 public class PtPassBatchApplication {
-
-    private final JobBuilderFactory jobBuilderFactory;
-
-    private final StepBuilderFactory stepBuilderFactory;
-
-    @Bean
-    public Step passStep() {
-        return stepBuilderFactory.get("passStep")
-            .tasklet((contribution, chunkContext) -> {
-                System.out.println("Execute passStep");
-                return RepeatStatus.FINISHED;
-            }).build();
-    }
-
-    @Bean
-    public Job passJob() {
-        return jobBuilderFactory.get("passJob")
-            .start(passStep())
-            .build();
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(PtPassBatchApplication.class, args);
