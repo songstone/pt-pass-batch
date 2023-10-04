@@ -2,16 +2,15 @@ package com.song.pass.domain.user;
 
 import com.song.pass.domain.BaseEntity;
 import com.song.pass.domain.constant.UserStatus;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Setter
+@Getter
 @Builder
 @Entity
 @Table(name = "user")
