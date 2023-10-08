@@ -1,16 +1,14 @@
 package com.song.pass.domain.packaze;
 
 import com.song.pass.domain.BaseEntity;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
 @NoArgsConstructor
-@Getter
 @ToString
+@Setter
+@Getter
 @Entity
 @Table(name = "package")
 public class Package extends BaseEntity {
