@@ -3,6 +3,7 @@ package com.song.pass.domain.user;
 import com.song.pass.domain.BaseEntity;
 import com.song.pass.domain.constant.UserStatus;
 import lombok.*;
+import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 
@@ -24,5 +25,6 @@ public class User extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private UserStatus status;
     private String phone;
-    private String meta;
+
+    private String uuid;
 }
